@@ -1,0 +1,68 @@
+.background-image {
+    position: fixed; /* 固定位置，覆盖整个屏幕 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    opacity: 0.7;
+    z-index: -12; /* 确保背景在内容之下 */
+}
+.info-box {
+    background-color: azure;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #333333; /* 边框颜色可以根据需要调整 */
+}
+
+#map {
+    height: 600px;
+    width: 1460px;
+}
+.chart-container {
+    width: 100%; /* Adjust width to 100% */
+    display: block; /* Stack charts vertically on small screens */
+    margin-top: 50px; /* Add space above charts */
+}
+.chart-container2 {
+    width: 70%; /* Adjust width to 100% */
+    display: block; /* Stack charts vertically on small screens */
+    margin-left: 180px;
+}
+@media (min-width: 768px) { /* Adjust layout for tablets and larger screens */
+    .chart-container {
+        width: 45%;
+        display: inline-block;
+    }
+}
+.bar {
+    fill: midnightblue;
+}
+.bar:hover {
+    fill: darkslateblue;
+}
+.axis-label {
+    font: 50px sans-serif;
+}
+.chart-title {
+    font-weight: bold ;
+    color: black ;
+}
+.page0-title {
+    text-align: center;
+    font-size: 80px; /* 修改字号大小 */
+    margin: 20px 0;
+    font-weight: bold; /* 加粗字体 */
+    color: #333; /* 修改字体颜色 */
+}
+.page-title {
+    text-align: center;
+    font-size: 50px; /* 修改字号大小 */
+    margin: 20px 0;
+    font-weight: bold; /* 加粗字体 */
+    color: #333; /* 修改字体颜色 */
+}

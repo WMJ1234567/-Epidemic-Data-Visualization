@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国感染人数地图</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="d3.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+</head>
+<body>
+
+<h1 class="page0-title">中*国*疫*情</h1>
+<h1 class="page-title">2022全年疫情感染人数统计</h1>
+<div id="map"></div>
+<script src="china.js"></script>
+<h1 class="page-title">2022年疫情累计感染人数统计（不含港澳台地区）</h1>
+<script src="index.js"></script>
+
+<div class="chart-container">
+    <canvas id="pieChart"></canvas>
+</div>
+<div class="chart-container">
+    <canvas id="barChart"></canvas>
+</div>
+<div class="info-box">
+    <p>新冠病毒感染将自2023年1月8日起由“乙类甲管”调整为“乙类乙管”，这是我国新冠疫情防控政策的一次重大调整。</p>
+    <div style="text-align: right;">
+        <a href="https://www.gov.cn/xinwen/2022-12/27/content_5733672.htm" target="_blank">访问</a>
+    </div>
+    <div style="text-align: right;">
+        <a href="https://www.gov.cn/zhengce/zhengceku/2022-12/26/content_5733669.htm" target="_blank">相关稿件---国家卫生健康委公告2022年第7号</a>
+    </div>
+
+</div>
+<div id="chart"></div>
+<select id="provinceSelect"></select>
+
+<div class="info-box">
+    <div id="messages"></div>
+</div>
+<script src="zhu.js"></script>
+<h1 class="page-title">新冠疫苗累计接种人数统计（不含港澳台地区）</h1>
+<div class="info-box">
+    <p>我国目前接种的策略是按照“两步走”方案，第一步是重点人群的接种。第二步，随着疫苗获批上市，疫苗产量的逐步提高，将会有更多的疫苗投入使用。通过有序开展接种，符合条件的公众都能实现“应接尽接”，逐步在人群当中构筑起人群的免疫屏障，控制新冠肺炎在国内的流行。（中国疾病预防控制中心）</p>
+    <div style="text-align: right;">
+        <a href="http://www.nhc.gov.cn/xcs/nwwd/202101/af9c0f31e14d4810b44742f7daaf8885.shtml" target="_blank">普通老百姓如果有新冠病毒疫苗接种意愿，是否可以报名接种？</a>
+    </div>
+    <p>
+        为进一步提高各地新冠病毒疫苗接种能力，国家卫生健康委疾控局组织中国疾控中心专家根据《中华人民共和国疫苗管理法》，结合近期印发的新冠病毒疫苗接种系列技术规范、疫苗接种工作实践经验和世界卫生组织相关技术指南，编制了新冠病毒疫苗接种培训大纲，供各地从事新冠病毒疫苗接种工作的相关人员参考使用。
+    </p>
+    <div style="text-align: right;">
+        <a href="http://www.nhc.gov.cn/jkj/s5899tg/202104/1619f941de034452a4b9bcaf307afd79.shtml" target="_blank">新冠病毒疫苗接种培训大纲</a>
+    </div>
+
+
+
+</div>
+<select id="monthSelector"></select>
+<script src="s.js"></script>
+<div class="chart-container2">
+    <canvas id="vaccineChartBar"></canvas>
+    <canvas id="vaccineChartLine"></canvas>
+</div>
+<div class="background-image"></div>
+</body>
+</html>
